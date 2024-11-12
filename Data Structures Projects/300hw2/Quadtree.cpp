@@ -190,24 +190,24 @@ void Quadtree::searchRegion(int x, int y, int r, Node* node, std::vector<std::st
 		break;
 	case 10:
 		searchRegion(x, y, r, node->SE, visitedCities, foundCities);
-		searchRegion(x, y, r, node->NW, visitedCities, foundCities);
 		searchRegion(x, y, r, node->SW, visitedCities, foundCities);
+		searchRegion(x, y, r, node->NW, visitedCities, foundCities);
 		break;
 	case 11:
 		searchRegion(x, y, r, node->SE, visitedCities, foundCities);
-		searchRegion(x, y, r, node->NW, visitedCities, foundCities);
 		searchRegion(x, y, r, node->NE, visitedCities, foundCities);
+		searchRegion(x, y, r, node->NW, visitedCities, foundCities);
 		break;
 	case 12:
 		searchRegion(x, y, r, node->SW, visitedCities, foundCities);
-		searchRegion(x, y, r, node->NW, visitedCities, foundCities);
 		searchRegion(x, y, r, node->NE, visitedCities, foundCities);
+		searchRegion(x, y, r, node->NW, visitedCities, foundCities);
 		break;
 	case 13:
 		searchRegion(x, y, r, node->SE, visitedCities, foundCities);
-		searchRegion(x, y, r, node->NW, visitedCities, foundCities);
-		searchRegion(x, y, r, node->NE, visitedCities, foundCities);
 		searchRegion(x, y, r, node->SW, visitedCities, foundCities);
+		searchRegion(x, y, r, node->NE, visitedCities, foundCities);
+		searchRegion(x, y, r, node->NW, visitedCities, foundCities);
 		break;
 	}
 }
