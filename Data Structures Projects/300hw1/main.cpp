@@ -70,13 +70,15 @@ void printMatrix(vector<vector<int>>& matrix) {
 
 }
 
-void takeInput(int& n) {
+bool takeInput(int& n) {
 	cout << "Enter the value of N for the N-Queens problem: ";
 	cin >> n;
 
 	if (n <= 0) {
 		cout << "Invalid input. Please enter a positive integer" << endl;
+		return 0;
 	}
+	return 1;
 }
 
 void writeSolutionsToFile(vector<vector<int>> &solutions, int N) {
@@ -159,7 +161,7 @@ int main() {
 	vector<vector<int>> safeMatrix;
 	vector<vector<int>> solutions;
 
-	takeInput(N);
+	if(!takeInput(N)) return 0;
 	consturctSafeMatrix(safeMatrix,N);
 	solveNQueens(safeMatrix,solutions,N);
 	writeSolutionsToFile(solutions,N);
