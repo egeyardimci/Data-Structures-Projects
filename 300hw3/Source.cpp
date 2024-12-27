@@ -18,7 +18,6 @@ public:
 private:
     int size = 0;
     std::vector<std::string> hashArray;
-    void reHash();
 
 };
 
@@ -204,22 +203,7 @@ void programLoop(HashTable& hashTable) {
 }
 
 int main() {
-    //std::string flattenedImage = getFlattenedImageFromFile("test.txt");
-    //std::cout << encodeRLE(flattenedImage) << std::endl;
-
-    HashTable ht = HashTable(100);
-    /*
-    ht.insert("asdf");
-    ht.insert("asdf");
-    ht.insert("asdfe");
-    ht.insert("asdfeg");
-
-
-    std::cout << ht.search("asdf");
-
-    std::cout << ht.search("asdfe");
-    std::cout << "asd";
-*/
+    HashTable ht = HashTable(997); // prime number near 1000
 
     programLoop(ht);
     std::cout << "Exiting the program!";
